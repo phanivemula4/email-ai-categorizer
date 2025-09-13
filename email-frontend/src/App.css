@@ -1,0 +1,189 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f5f7;
+    margin: 0;
+    padding: 20px;
+    color: #172b4d;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    padding: 20px;
+    background-color: #0052cc;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.search-container {
+    padding: 15px 20px;
+    border-bottom: 1px solid #dfe1e6;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.email-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.email-item {
+    border-bottom: 1px solid #dfe1e6;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.email-item:last-child {
+    border-bottom: none;
+}
+
+.email-item:hover {
+    background-color: #f8f9fa;
+}
+
+.email-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.email-sender {
+    font-weight: bold;
+    color: #0052cc;
+}
+
+.email-date {
+    font-size: 0.8rem;
+    color: #6b778c;
+}
+
+.email-subject {
+    font-weight: 500;
+    color: #172b4d;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.email-body {
+    font-size: 0.9rem;
+    color: #42526e;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 800px;
+}
+
+.category-label {
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 12px;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Category Colors */
+.label-Interested { background-color: #36b37e; } /* Green */
+.label-Meeting_Booked { background-color: #0052cc; } /* Blue */
+.label-Not_Interested { background-color: #ff5630; } /* Red */
+.label-Spam { background-color: #ffab00; } /* Yellow */
+.label-Out_of_Office { background-color: #6b778c; } /* Gray */
+.label-Uncategorized { background-color: #42526e; } /* Dark Gray */
+
+.status-message {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.1rem;
+    color: #6b778c;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #0052cc;
+    animation: spin 1s ease infinite;
+    margin: 40px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dfe1e6;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #6b778c;
+}
+
+.modal-subheader {
+    font-size: 0.9rem;
+    color: #42526e;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
